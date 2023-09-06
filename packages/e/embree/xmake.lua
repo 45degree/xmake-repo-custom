@@ -49,7 +49,7 @@ package("embree", function()
         )
     end)
 
-    on_install(function(package)
+    on_install("macosx", "linux", "windows|x64", "windows|x86", function(package)
         local configs = {
             "-DBUILD_TESTING=OFF",
             "-DBUILD_DOC=OFF",
